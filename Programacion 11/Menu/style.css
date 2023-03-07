@@ -1,0 +1,111 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+
+body{
+    background-color: rgb(213, 163, 253);
+}
+
+nav{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding-top: 5px;
+    background-color: rgb(174, 87, 255);
+    padding-left: 5%;
+    padding-right: 5%;
+    font-weight: bold;
+}
+
+h1{
+    color: rgb(89, 3, 146);
+    font-size: 45px;
+}
+
+ul li{
+    display: inline-block;
+    padding: 0px 20px;
+}
+
+a{
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.menu-normal li:hover{
+background-color: rgb(195, 141, 247);
+}
+
+.menu-normal{
+list-style: none;
+display: flex;
+justify-content: space-around;
+}
+
+.menu-normal >li >a{
+    display: block;
+    padding: 15px 20px;
+}
+
+.menu-desplegable{
+    position: absolute;
+    display: none;
+    list-style: none;
+    width: 200px;
+    background-color: rgb(195, 141, 247);
+}
+
+.menu-normal li:hover .menu-desplegable{
+display: block;
+}
+
+.menu-desplegable li:hover {
+    background-color:  rgb(174, 87, 255);
+}
+
+.menu-desplegable li a{
+display: block;
+color: darkmagenta;
+padding: 15px 15px 15px 20px;
+text-decoration: none;
+}
+
+.submenu{
+    list-style: none;
+    display: flex;
+    justify-content: space-around;
+}
+
+.submenu >li >a{
+    display: block;
+    padding: 8px 10px;
+    position: right;
+}
+
+.submenu{
+    position: absolute;
+    display: none;
+    list-style: none;
+    width: 200px;
+    background-color: rgb(195, 141, 247);
+}
+
+.menu-desplegable li:hover .submenu{
+    display: block;
+}
+
+.menu-normal li ul{
+display: none;
+position: absolute;
+min-width: 200px;
+}
+
+.menu-normal li ul li{
+position: relative;
+}
+
+.menu-normal li ul li ul{
+right: -200px;
+top: 0;
+}
